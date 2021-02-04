@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restaurant/Cart_Screen.dart';
-import 'package:restaurant/Hori.dart';
+import 'package:restaurant/Rating.dart';
 import 'package:restaurant/Horizontal.dart';
 
 import 'Home_Screen.dart';

@@ -1,24 +1,25 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:restaurant/Constants.dart';
+import 'package:restaurant/Home_Screen.dart';
 import 'package:restaurant/Horizontal.dart';
 import 'package:restaurant/Top3dishes.dart';
 
 
-class Home extends StatelessWidget{
+class CuisineDishes extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return HomeWidget();
+    return CuisineDishesWidget();
   }
 }
 
-class HomeWidget extends StatefulWidget{
+class CuisineDishesWidget extends StatefulWidget{
   @override
-  HomeWidgetState createState()=>HomeWidgetState();
+  CuisineDishesWidgetState createState()=>CuisineDishesWidgetState();
 }
 
-class HomeWidgetState extends State<HomeWidget> {
-  static String cat;
+class CuisineDishesWidgetState extends State<CuisineDishesWidget> {
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class HomeWidgetState extends State<HomeWidget> {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text(
-            'My Restaurant',
+            'Cuisine Name',
             style: TextStyle(
                 wordSpacing: 2.0,
                 letterSpacing: 2.0,
@@ -38,10 +39,10 @@ class HomeWidgetState extends State<HomeWidget> {
           leading: RaisedButton(
             color: Colors.black,
             onPressed: () {
-              // Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfilePage()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
             },
             child: Icon(
-              Icons.g_translate,
+              Icons.arrow_back_outlined,
               color: Colors.white,
             ),
           ),
@@ -55,16 +56,12 @@ class HomeWidgetState extends State<HomeWidget> {
             ),
           ],
         ),
-        body: new SingleChildScrollView(
-          child: Column(
-            children: [
-              Horizontal(),
-              Top3()
-            ],
-          )
-        ),
-      ),
-    );
+        body: new ListView.builder(
+          itemCount: Constants.lNorthIndian.length,
+          itemBuilder: (context, index) => new Text(Constants.lNorthIndian[0]),
+          ),
+        )
+      );
   }
 
 }

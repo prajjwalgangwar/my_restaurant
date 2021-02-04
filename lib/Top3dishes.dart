@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:restaurant/Hori.dart';
-import 'package:restaurant/main.dart';
+import 'package:restaurant/Constants.dart';
+import 'package:restaurant/Rating.dart';
 
 class Top3 extends StatelessWidget{
   @override
@@ -21,9 +21,9 @@ class Top3StateWidget extends State<Top3State>{
       color: Colors.white12,
          child: Column(
            children: [
-             tile("Matar Paneer","230","https://www.easycookingwithmolly.com/wp-content/uploads/2020/02/shahi-matar-paneer-recipe.jpg"),
-             tile("Samosa","45","https://www.blueosa.com/wp-content/uploads/2020/01/top-10-indian-dishes-samosas.jpg"),
-             tile("Risotto Balls (Arancini)","180","https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2Farchive%2F4bd4b5bdd293c8fdebed5f39d865f38fe8e86df4"),
+             tile(Constants.fusionCuisin["Thandai Rabdi"].elementAt(0),Constants.fusionCuisin["Thandai Rabdi"].elementAt(1),Constants.fusionCuisin["Thandai Rabdi"].elementAt(2)),
+             tile(Constants.northIndian["Mutter Paneer"].elementAt(0),Constants.northIndian["Mutter Paneer"].elementAt(1),Constants.northIndian["Mutter Paneer"].elementAt(2)),
+             tile(Constants.american["The Hamburger"].elementAt(0),Constants.american["The Hamburger"].elementAt(1),Constants.american["The Hamburger"].elementAt(2)),
 
            ],
          )
@@ -89,26 +89,7 @@ class Top3StateWidget extends State<Top3State>{
                        ),
                ),
              ),
-             // Row(
-             //   children: [
-             //     SizedBox(
-             //       height: 60,
-             //       child: Padding(
-             //         padding: new EdgeInsets.all(10.0),
-             //         child: RatingsPage(),
-             //       ),
-             //     ),
-             //     Container(
-             //       child: MaterialButton(
-             //         color: Colors.black,
-             //         child: Icon(Icons.help_center_sharp,color: Colors.white,),
-             //         onPressed: () async {
-             //
-             //         },
-             //       ),
-             //     ),
-             //   ],
-             // )
+
            ],
          ),
        ),

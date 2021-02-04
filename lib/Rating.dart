@@ -11,7 +11,7 @@ class Rating extends StatefulWidget {
 }
 
 class _Rating extends State<Rating> {
-  int _currentRating = 0;
+  int _currentRating = 5;
 
   Widget _buildRatingStar(int index) {
     if (index < _currentRating) {
@@ -25,13 +25,7 @@ class _Rating extends State<Rating> {
     final stars = List<Widget>.generate(this.widget.maximumRating, (index) {
       return GestureDetector(
         child: _buildRatingStar(index),
-        onTap: () {
-          setState(() {
-            _currentRating = index + 1;
-          });
 
-          this.widget.onRatingSelected(_currentRating);
-        },
       );
     });
 
