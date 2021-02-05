@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:restaurant/Constants.dart';
 import 'package:restaurant/Rating.dart';
+
+import 'Constants1.dart';
 
 class Top3 extends StatelessWidget{
   @override
@@ -21,9 +22,9 @@ class Top3StateWidget extends State<Top3State>{
       color: Colors.white12,
          child: Column(
            children: [
-             tile(Constants.fusionCuisin["Thandai Rabdi"].elementAt(0),Constants.fusionCuisin["Thandai Rabdi"].elementAt(1),Constants.fusionCuisin["Thandai Rabdi"].elementAt(2)),
-             tile(Constants.northIndian["Mutter Paneer"].elementAt(0),Constants.northIndian["Mutter Paneer"].elementAt(1),Constants.northIndian["Mutter Paneer"].elementAt(2)),
-             tile(Constants.american["The Hamburger"].elementAt(0),Constants.american["The Hamburger"].elementAt(1),Constants.american["The Hamburger"].elementAt(2)),
+             tile(Constants1.fusionCuisinDetails["Thandai Rabdi"].elementAt(0),Constants1.fusionCuisinDetails["Thandai Rabdi"].elementAt(1), Constants1.fusionCuisinDetails["Thandai Rabdi"].elementAt(2)),
+             tile(Constants1.fusionCuisinDetails["KoJa with Kamikaze Fries"].elementAt(0), Constants1.fusionCuisinDetails["KoJa with Kamikaze Fries"].elementAt(1), Constants1.fusionCuisinDetails["KoJa with Kamikaze Fries"].elementAt(2)),
+             tile(Constants1.americanDetails["Tacos"].elementAt(0), Constants1.americanDetails["Tacos"].elementAt(1), Constants1.americanDetails["Tacos"].elementAt(2)),
 
            ],
          )

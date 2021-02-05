@@ -1,0 +1,15 @@
+{
+  "my_restaurant": "My Restaurant",
+
+  "north_indian": "North Indian",
+  "italian" : "Italian",
+  "mexican" : "Mexican",
+  "chinese" : "Chinese",
+  "thai" : "Thai",
+  "south_indian" : "South Indian",
+  "greece" : "Greece",
+  "american" : "American",
+  "japanese" : "Japanese",
+  "fusion" : "Fusion"
+
+}

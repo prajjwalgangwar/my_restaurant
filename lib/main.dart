@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant/Cart_Screen.dart';
+import 'package:restaurant/Screens/Cart_Screen.dart';
 import 'package:restaurant/Rating.dart';
 import 'package:restaurant/Horizontal.dart';
+import 'package:restaurant/Screens/Cuisine_Dishes.dart';
 
-import 'Home_Screen.dart';
+import 'Screens/Home_Screen.dart';
 
 void main() {
   // SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft]);

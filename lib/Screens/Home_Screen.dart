@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurant/Horizontal.dart';
+import 'package:restaurant/Screens/Cart_Screen.dart';
 import 'package:restaurant/Top3dishes.dart';
 
 
@@ -50,7 +51,7 @@ class HomeWidgetState extends State<HomeWidget> {
               color: Colors.black,
               child: Icon(Icons.shopping_cart, color: Colors.white,),
               onPressed: () async {
-                // showAlertDialog(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
               },
             ),
           ],
