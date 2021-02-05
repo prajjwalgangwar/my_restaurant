@@ -79,26 +79,7 @@ class CuisineDishesWidgetState extends State<CuisineDishesWidget> {
     int counter=0;
     int subTotal=0;
     List<String> l;
-    if(Constants1.cartCardDetails.containsKey(name))
-      {
-        l=Constants1.cartCardDetails[name];
-        counter=int.parse(l[3]);
-        counter++;
-        subTotal=int.parse(l[4]);
-        subTotal+=(int.parse(price) * counter);
-        l.insert(3, counter.toString());
-        l.insert(4, subTotal.toString());
-        Constants1.cartCardDetails[name]=l;
-      }
-    else
-      {
-        l.add(name);
-        l.add(price);
-        l.add(photo);
-        l.add(1.toString());
-        l.add(price);
-        Constants1.cartCardDetails[name]=l;
-      }
+
     return Container(
       child: Card(
         color: Colors.white,
@@ -139,6 +120,26 @@ class CuisineDishesWidgetState extends State<CuisineDishesWidget> {
                     color: Colors.black,
                   ),
                   onPressed: () async {
+                    if(Constants1.cartCardDetails.containsKey(name))
+                    {
+                      l=Constants1.cartCardDetails[name];
+                      counter=int.parse(l[3]);
+                      counter++;
+                      subTotal=int.parse(l[4]);
+                      subTotal+=(int.parse(price) * counter);
+                      l.insert(3, counter.toString());
+                      l.insert(4, subTotal.toString());
+                      Constants1.cartCardDetails[name]=l;
+                    }
+                    else
+                    {
+                      l.add(name);
+                      l.add(price);
+                      l.add(photo);
+                      l.add(1.toString());
+                      l.add(price);
+                      Constants1.cartCardDetails[name]=l;
+                    }
                   },
                 ),
               )

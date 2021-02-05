@@ -49,8 +49,11 @@ class CartWidgetState extends State<CartWidget> {
         body: Column(
           children: [
             Expanded(
-              child: ListTile(
-
+              child: ListView.builder(
+                itemCount: Constants1.cartCardDetails.length,
+                // itemBuilder: (context, index) {
+                //   // return cartCards(CuisineDishesWidgetState., price, image, count)
+                // },
               )
             ),
             calculation(),
@@ -63,6 +66,11 @@ class CartWidgetState extends State<CartWidget> {
 
   Widget cartCards(String dishname, String price, String image, int count) {
     int x = int.parse(price);
+    Map<String, List<String>> map=Constants1.cartCardDetails;
+    List<List<String>> l;
+    map.forEach((key, value) {
+      l.add(value);
+    });
     return Card(
       child: Expanded(
         child: Column(
@@ -84,7 +92,7 @@ class CartWidgetState extends State<CartWidget> {
                   ),
                 ),
                 title: Text(
-                  dishname,
+                  l[0][0].toString(),
                   style:
                       TextStyle(fontSize: 13, letterSpacing: 1, wordSpacing: 2),
                 ),
